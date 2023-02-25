@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="UTF-8" />
+	<title>Comment j’ai fait mon moteur de recherche web ?</title>
+  <link rel="shortcut icon" href="./icon.png" />
+	<meta name="viewport" content="width=device-width">
+	<link rel="stylesheet" href="css/style.css" />
+	<link rel="stylesheet" href="css/blog.css" />
+	
+  <meta
+          name="Comment j’ai fait mon moteur de recherche web ?"
+          content="blog de Griffure - William"
+  />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<!-- dossier image : ./img/comment-j-ai-fais-mon-moteur-de-recherche/ -->
+
+<body>
+	<div class="container_">
+		<ul class="menu">
+			<li class="menu_top"><span class="menu_top_wac">blog.griffure.com</span></li>
+			<div class="menu_bottom"><span class="menu_bottom_wac">
+				<a href="https://www.griffure.com">PORTFOLIO</a>
+				<a href="mailto:william@griffure.com">EMAIL</a>
+			</span></div>
+		</ul>
+
+		<section class="QuiSuisJe" id="qui">
+			<a href="./index.html">← blog.griffure.com</a>
+		</section>
+
+		<article class="QuiSuisJe"><h1>Comment j’ai fait mon moteur de recherche web ?</h1>
+		
+		<p>Parmi mes projets personnels les plus fous se trouve une idée un peu farfelue.</p>
+
+<p>Il y a quelques année de cela, durant l’année 2016, je me suis passionné pour une dimension très spécifique de l’informatique, à savoir l’accès à l’information.</p>
+
+<p>Je me suis alors intéressé au fonctionnement de moteurs de recherche dédiés aux web. <br/><br/>Alors si il existe plein de moteurs de recherche aujourd’hui, celui qui détient le monopole aux Etats-Unis et en Europe est bien évidemment Google. Egérie des Start-ups Garages et autres disrupteurs du dimanche, c’est aujourd’hui un portail rassemblant plus qu’un outil de recherche de page web, mais bien un assortiment de data-centers et de compétences permettant de dompter les flux de données à l’échelle mondiale.</p>
+
+<p>Mais si nous revenons à la base du concept de moteur de recherche, c’est une tout autre idée bien que la vision reste la même.</p>
+
+<p>Derrière un moteur de recherche tel qu’ils existaient dans la fin des années 90, il y a trois entités bien distinctes. Pour ce cas d’usage, je développerai le fonctionnement d’un moteur de recherche web très basique.</p>
+
+<h2>Le Crawler, l’explorateur du web</h2>
+
+<p>Tout d’abord, il y a le Crawler, aussi appelé Spider. C’est un logiciel qui se balade de page en page pour enregistrer l’ensemble des données associées. Il y lit le contenu, en déduit les mots clés associés, y recense l’ensemble des liens vers lesquels la page courante redirige.</p>
+
+<p>Finalement, il fait exactement ce que son nom nous induit. On peut alors imaginer une petite araignée parcourant le web et traçant sa toile.</p>
+
+<p>Chose important à noter: notre araignée robotisée, avant de pénétrer dans la page web, est tenu de lire un fichier robot.txt qui lui dit ou non si elle a le droit d’accéder ou d’enregistrer la page en question.</p>
+
+<p>Une fois notre page web traitée, notre araignée poursuit son chemin en allant suivre les autres liens.</p>
+
+<h2>L’index</h2>
+
+<p>Chaque page visitée par notre araignée est inscrite dans une base de donnée appelée l’index, qui regroupe l’ensemble des données relative à la page web.</p>
+
+<p>Les pages sont recensées dans l’index et sont couplées à leurs indice de pertinence: le pagerank.</p>
+
+<h2>Le Pagerank: classer l’information</h2>
+
+<p>Par la suite, c’est au pagerank de récupérer ces données brutes et de noter la page web en conséquence.</p>
+
+<p>Il va d’abord enregistrer sa pertinence en comptant le nombre de lien qui redirigent vers cette page. Puis, il lui donner un score arbitraire en fonction de la pertinence des pages de ces liens sources. </p>
+
+<p>Aujourd’hui, il existe des normes dédiées au SEO, à l’accessibilité et aux standards. Par exemple, si votre site est doté d’une bannière en flash avec des polices de caractères clignotantes tout en omettant d’être lisible sur un téléphone, c’est compliqué de se frayer un chemin vers la première page de résultats.</p>
+
+<p>Le Pageranker va également associer ces pages aux mots clé les plus pertinents.</p>
+
+<h2>Un champs de recherche cache parfois autre chose</h2>
+
+<p>Enfin, il y a le front, qui est le site web ou l’application permettant d’interroger notre index.</p>
+
+<p>En 2016, je rêvais déjà de construire un petit moteur dédié à la recherche web. Hélas, il me manquait à ce moment quelques notions qui m’ont empêcher de programmer l’outil de mes rêves.</p>
+
+<p>A ce moment là, j’ai donc travaillé sur un méta-moteur de recherche !</p>
+
+<p>Un méta-moteur de recherche, c’est un site ou une application qui (de base) n’a ni crawler, ni index. En effet, ce système se contente d’aller piocher chez la concurrence les résultats de recherche pour les ressortir sur une page avec un autre logo.</p>
+
+<iframe width="100%" height="315" src="https://www.youtube.com/embed/n4LuPULsrCQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+<p>Du coup, à ce moment là, puisque je n’avais pas les compétences en programmation, j’ai décidé de travailler une autre partie tout aussi interessante: l’interface utilisateur.</p>
+
+<p>Je me suis donc appliqué à repenser avec les moyens du bord.</p>
+
+<iframe width="100%" height="315" src="https://www.youtube.com/embed/vtRnDP7rdF4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+<p>L’idée derrière ce projet était alors d’imaginer une nouvelle forme d’expérience utilisateur axée sur l’idée de personnifier le logiciel.</p>
+
+<p>Inspirée par les mascottes de Microsoft Word comme Clippy qui conseillait l’utilisateur sur son usage du traitement de texte, Toast était voué à servir de visage à l’éternelle page blanche ornée du champs de recherche qui fait la réputation de l’internet.</p>
+
+<p>Au delà le l’interaction sommaire du personnage, le personnage serait également de champs de recherche qui s’affichage au gré des requêtes de l’utilisateur.</p>
+
+<p>Mon objectif dans la réalisation de ce projet était de moderniser la manière dont l’utilisateur interagit avec son outil. Car c’était aussi l’époque ou les applications permettant d’échanger avec la machine avec leurs voix. Après tout, la voix de Siri permet de donner une dimension palpable à l’outil qu’on utilise. Et humaniser un logiciel permet à mon sens de capter une nouvelle audience en ajoutant une couche de simplification au dessus d’un outil déjà simplifié à l’extrême.</p>
+
+<p>Avant cela, j’avais déjà travaillé sur une autre mouture de l’interface du moteur un peu plus proche de ce qui existait déjà.</p>
+
+<h2>Parcourir le web, un lien à la fois</h2>
+
+<p>Maintenant, parlons de mon projet qui remonte à deux ans (en 2020 donc). A cet instant, je m’intéresse beaucoup moins à l’interface utilisateur, mais bien à la technologie derrière les outils que j’utilise au quotidien. </p>
+
+<p>J’ai le besoin de comprendre mieux comment faire tourner un vrai crawler.</p>
+
+<p>Et pour cela, la première idée qui me vient à l’esprit est littéralement une boucle récursive: un moulin qui ne s’arrête jamais puisqu’il persiste à parcourir toutes les branches d’un arbre dont la hauteur n’est probablement pas un nombre raisonnable.</p>
+
+<p>Du coup, j’ai commencé à la dure ! Une boucle récursive est initialisée par un appel de l’utilisateur au format ligne de commande. Par la suite, une partie du code (au format Objet) se connecte à notre base de donnée pour être rappelée autant de fois que nécéssaire en écriture.</p>
+
+<p>La boucle va ajouter ou modifier les valeurs dans notre base de donnée correspondant à la page web et dont la clé est pour le moment le lien hypertexte de notre page.</p>
+
+<h2>Ce que j’en ai appris</h2>
+
+<p>Tout cela, en plus de me servir d’exercice, m’a permis d’entrevoir les limites des outils que j’utilisais alors, mais aussi les contraintes qui en découlent.</p>
+
+<p>D’abord, le language JAVA est un langage séduisant et robuste, mais condamné à tourner sur une machine virtuelle appelée JVM. Cette dernière est une machine à gaz, opaque et dont on ne peut percevoir le fonctionnement de l’extérieur. En gros, c’est une boite noire et pas du tout optimisé pour mon idée, puisqu’à terme, je veux pouvoir faire des Threads de mes différents Crawlers pour faire tourner plusieurs araignées en parallèle. Ce qui fait que sur une machine donnée, je veux pouvoir avoir un maximum de threads qui tournent en parallèle, et qui soient orchestrés par un outil plus automatisable qu’un appel de commande.</p>
+
+<p>Ensuite, il y a la base de données que j’utilisais: une base MySQL toute simple. Mais encore une fois, ce n’est pas ce que je veux pour manipuler de grandes quantités de données de manière plus souple, tout en imaginant un système de classification qui soit plus performant qu’un simple attribut. De plus, j’imagine que si une base MySQL est amplement suffisante pour faire tourner un site classique, ce n’est pas le meilleur outil pour l’application de mes rêves.</p>
+
+<p>Du coup, je me pense me tourner à terme vers une solution en C plus plus. Mais j’hésite encore, et comme je vois de nouveaux langages apparaître régulièrement, je pense avoir l’opportunité de découvrir de nouvelles manières de construire le moteur de recherche de mes rêves !</p>
+
+<img src="./img/comment-j-ai-fais-mon-moteur-de-recherche/xalt.jpg" alt="" width="100%" height="auto">
+
+<h2>Conclusion</h2>
+
+<p>J’essaie de découvrir de nouvelles technologies à apprivoiser très régulièrement, et mes projets personnels sont pour moi l’un des meilleurs moyens de rester à la page. </p>
+
+<p>Je trouve néanmoins que l’évolution de mon petit projet personnel m’encourage à en apprendre plus !</p>
+
+
+		
+		</article>		
+
+																<section class="MeContacter" id="contact">
+																<a href="./index.html">← blog.griffure.com</a>
+																	
+																<p>© William Clément</p>
+																	
+																</section>
+													</div>
+													
+												</body>
+												</html>
